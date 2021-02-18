@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Navbar*/
+.burger {
+    background-color: rgb(61, 61, 61);
+    overflow: hidden;
+}
+
+.burger a.active{
+    background-color: royalblue;
+}
+
+.burger a {
+    border-bottom: solid white 1px;
+    color: white;
+    padding: 8px 12px;
+    float: left;
+}
+
+.burger #icon {
+    display: none;
+}
+
+.burger a:not(:first-child):hover {
+    background-color: rgb(95, 95, 95);
+}
+
+@media screen and (max-width: 650px) {
+    .burger a:not(:first-child) {
+        display: none;
+    }
+    .burger #icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .burger.responsive {position: relative;}
+    .burger.responsive #icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .burger.responsive a{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/*Datatables*/
+
+td {
+    font-size: 13px;
+}
+
+#verde td {
+    background-color: rgba(75, 204, 75, 0.3);
+    color: black;
+}
+
+#amarillo td {
+    background-color: rgba(255, 255, 0, 0.3);
+    color: black;
+}
+
+#rojo td {
+    background-color: rgba(255, 0, 0, 0.3);
+    color: black;
+}
+
+#negro td {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: black;
+}
+
+/*Modal*/
+
+.mod {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    display: none;
+}
+
+.modal-box {
+    border-radius: 4px;
+    width: 18rem;
+    margin: 100px auto;
+    padding: 10px;
+    background-color: white;
+}
+
+.text-area {
+    border-radius: 2px;
+    border-color: lightgray;
+    width: 100%;
+    grid-auto-rows: auto;
+}
+
+.mod .centrar {
+    text-align: center;
+}
+
+.modal-box .titulo {
+    text-align: center;
+    font-size: x-large;
+    border-bottom: 1px solid lightgray;
+}
+
+.btn.danger {
+    border: 0px;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 4px;
+    color: white;
+    background-color: rgba(221, 15, 15, 0.836);
+    text-decoration: none;
+}
